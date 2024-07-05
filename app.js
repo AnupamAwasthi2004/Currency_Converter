@@ -57,8 +57,8 @@ btn.addEventListener("click", async(evt) =>{
         amount.value = "1";
     }
     console.log(toCurr.value);
-//const BASE_URL = `https://api.currencyapi.com/v3/latest?apikey=cur_live_FukMt8z5rGtdsOZJOIVDRwsubQbimj9UDKFg9BAL&base_currency=${fromCurr.value}&currencies=${toCurr.value}`;
-const BASE_URL =`https://v6.exchangerate-api.com/v6/b6995755a0daaeb36b58f230/pair/${fromCurr.value}/${toCurr.value}`;
+var apiKey = //Enter Your API KEY;
+const BASE_URL =`https://v6.exchangerate-api.com/v6/${apiKey}/pair/${fromCurr.value}/${toCurr.value}`;
 let response = await fetch(`${BASE_URL}`);
 let data = await response.json();
 let temp = toCurr.value.toUpperCase(); 
